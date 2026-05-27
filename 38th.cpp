@@ -1,15 +1,24 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 int main(){
     int arr[]={5,2,11,7,15};
     int target=9;
-    int n=5;
-    for(int i=0; i<n-1 ; i++){
-        for(int j=i+1; j<n ; j++){
-            if(target == (arr[i]+arr[j])){
-                cout<<i<<" "<<j;
-                break;
+    sort(arr , (arr + (sizeof(arr)/sizeof(arr[0]))));
+    for(int i=0; i<6; i++)
+     cout<<arr[i]<<" ";
+     cout<<endl;
+    int st=0 , end=(sizeof(arr)/sizeof(arr[0]))-1;
+    while (st<end){
+        if((arr[st]+arr[end]) == target){
+            cout<<st<<","<<end;
+           return 0;
         }
+        else if((arr[st]+arr[end]) > target)
+            end--;
+        else 
+            st++;    
     }
-    }    return 0;
+        cout<<-1<<","<<-1;
+    return 0;
 }
