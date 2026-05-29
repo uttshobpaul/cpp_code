@@ -6,6 +6,7 @@ using namespace std;
 
 class Solution {
 public:
+
     vector<int> twoSum(vector<int>& nums, int target) {
     unordered_map<int , int> m ;
     vector<int> ans;
@@ -32,5 +33,6 @@ int main(){
     Solution obj;
     vector<int> ans=obj.twoSum(arr,target);
     cout<<ans[0]<<","<<ans[1];
+    cout<<endl;
     return 0;
 }
