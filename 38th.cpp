@@ -32,6 +32,7 @@ int main(){
     int target=9;
     Solution obj;
     vector<int> ans=obj.twoSum(arr,target);
+    cout<<endl;
     cout<<ans[0]<<","<<ans[1];
     cout<<endl;
     return 0;
